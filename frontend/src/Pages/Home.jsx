@@ -3,11 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { FaArrowRightLong, FaHeart } from "react-icons/fa6";
 
-const Container = lazy(() => import("../Components/Container"))
-const SlickSlider = lazy(() => import("../Components/SlickSlider"))
-const Masonry = lazy(() => import("../../ReactBits/Masonry/Masonry"))
-const About = lazy(() => import("./About"))
-
+import Container from "../Components/Container";
+import SlickSlider from "../Components/SlickSlider";
+import Masonry from "../../ReactBits/Masonry/Masonry"
+import About from "./About"
 
 import BgBunner from "../assets/Images/bg-2.webp"
 import ManReview from "../assets/Images/Review-image.avif"
@@ -442,6 +441,7 @@ const ExploreSecond = () => {
 
 
     }, []);
+
 
     return (
         <section ref={triggerRef} className=" w-full flex items-center min-h-[100vh] bg-gradient-to-b from-[#1c2335] to-[#1F2024] text-white " >

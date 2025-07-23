@@ -11,8 +11,6 @@ import { MainContext } from '../MainContext';
 import { logout } from '../Reducers/UserSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { GrLogin } from "react-icons/gr";
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
 
 function Header() {
     const [NavColor, SetNavColor] = useState(false)
