@@ -21,14 +21,14 @@ function Product() {
 
 
     return (
-        <section className=" bg-white text-gray-800">
+        <section className=" bg-white text-gray-800 ">
             <div className=" bg-black py-2 px-3 w-full text-center text-white font-semibold font-[cinzel] "> Discount For Limited times %</div>
             <div className=" w-full h-[50vh] bg-red-400 ">
                 <img src={product?.bgImg} loading="lazy" className="w-full h-full object-cover" alt="Image Not found" />
             </div>
 
             <Container>
-                <div className="grid md:grid-cols-2 gap-8 items-start mt-20 font-[cardo]">
+                <div className="grid px-6 md:grid-cols-2 gap-8 items-start mt-20 font-[cardo]">
 
                     <div className="space-y-4">
                         <img
