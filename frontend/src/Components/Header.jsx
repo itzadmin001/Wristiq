@@ -21,7 +21,6 @@ function Header() {
     const auth = useSelector(state => state.user.data?.auth);
     const Navigate = useNavigate()
     const dispatch = useDispatch()
-    const NavRef = useRef()
     useEffect(() => {
         const handleScroll = () => {
             if (Math.floor(window.scrollY) > 100) {
@@ -38,15 +37,7 @@ function Header() {
 
 
 
-    useGSAP(() => {
-        gsap.from(NavRef.current, {
-            y: -20,
-            duration: 2,
-            delay: 1,
-            opacity: 0,
-            ease: "power2.in"
-        })
-    }, [])
+
 
     useEffect(() => {
         if (menuOpen) {
@@ -75,7 +66,7 @@ function Header() {
 
 
     return (
-        <div ref={NavRef} className={`w-full fixed top-10 z-10 text-white px-4  font-[cinzel]`} >
+        <div className={`w-full fixed top-10 z-10 text-white px-4  font-[cinzel]`} >
             <Container clasess={` w-full p-4 flex items-center justify-between rounded-3xl ${NavColor === true ? "bg-[#0B0B0B]/80 ,backdrop-blur-md " : " bg-transparent"}  duration-300  `}>
                 <img src={Logo} alt="" className='w-12' />
                 <ul className='md:flex hidden items-center gap-10  font-semibold uppercase'>
