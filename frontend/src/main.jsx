@@ -10,6 +10,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+
 createRoot(document.getElementById('root')).render(
   <Provider store={store}>
     <MainContext>

@@ -22,8 +22,6 @@ const WistList = lazy(() => import("./Pages/WistList"))
 
 
 
-
-
 function App() {
   const products = useSelector(state => state.product.product)
   const dispatch = useDispatch()

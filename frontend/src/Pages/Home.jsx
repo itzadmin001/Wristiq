@@ -38,6 +38,45 @@ function Home() {
     const dispatch = useDispatch()
 
 
+    // hero refs 
+    const HeadingRef = useRef();
+    const FirstButton = useRef();
+
+    // popularWatch refs 
+    const NewLunchRef = useRef()
+    const TriggerRef = useRef()
+    const PopularWaatchRef = useRef()
+
+
+    // exploreFirst refs 
+    const ExploreRef = useRef()
+    const detailsRef = useRef()
+    const TargetRef = useRef()
+
+    // customer review ref 
+    const headingRef = useRef()
+    const DesRef = useRef()
+    const SliderRef = useRef()
+    const Trigger2Ref = useRef()
+
+
+    // Explole second refs 
+    const ImageRef = useRef()
+    const DetailsRef = useRef()
+    const triggerRef = useRef()
+
+
+    // pictuer explore refs last 
+    const TrigerRef = useRef()
+    const ShowRef = useRef()
+
+
+
+
+
+
+
+
     useEffect(() => {
         dispatch(lsToCart())
     }, [])
@@ -46,12 +85,12 @@ function Home() {
 
     return (
         <>
-            <Hero Navigate={Navigate} />
-            <OurPopularWatch Navigate={Navigate} products={products} />
-            <ExploreFirst />
-            <CustomersReview />
-            <ExploreSecond />
-            <PicutesExplore />
+            <Hero Navigate={Navigate} HeadingRef={HeadingRef} FirstButton={FirstButton} />
+            <OurPopularWatch Navigate={Navigate} products={products} PopularWaatchRef={PopularWaatchRef} TriggerRef={TriggerRef} NewLunchRef={NewLunchRef} />
+            <ExploreFirst TargetRef={TargetRef} detailsRef={detailsRef} ExploreRef={ExploreRef} />
+            <CustomersReview headingRef={headingRef} DesRef={DesRef} SliderRef={SliderRef} Trigger2Ref={Trigger2Ref} />
+            <ExploreSecond ImageRef={ImageRef} DetailsRef={DetailsRef} triggerRef={triggerRef} />
+            <PicutesExplore TrigerRef={TrigerRef} ShowRef={ShowRef} />
             <About />
         </>
     )
@@ -60,10 +99,9 @@ function Home() {
 
 
 
-const Hero = ({ Navigate }) => {
+const Hero = ({ Navigate, FirstButton, HeadingRef }) => {
 
-    const HeadingRef = useRef();
-    const FirstButton = useRef();
+
 
     useGSAP(() => {
         const tl = gsap.timeline();
@@ -108,11 +146,9 @@ const Hero = ({ Navigate }) => {
     )
 }
 
-const OurPopularWatch = ({ Navigate, products }) => {
+const OurPopularWatch = ({ Navigate, products, PopularWaatchRef, TriggerRef, NewLunchRef }) => {
 
-    const NewLunchRef = useRef()
-    const TriggerRef = useRef()
-    const PopularWaatchRef = useRef()
+
 
     var settings = {
         className: "center",
@@ -210,11 +246,9 @@ const OurPopularWatch = ({ Navigate, products }) => {
     )
 }
 
-const ExploreFirst = () => {
+const ExploreFirst = ({ TargetRef, detailsRef, ExploreRef, }) => {
 
-    const ExploreRef = useRef()
-    const detailsRef = useRef()
-    const TargetRef = useRef()
+
 
     useGSAP(() => {
         const tl = gsap.timeline({
@@ -257,7 +291,7 @@ const ExploreFirst = () => {
     )
 }
 
-const CustomersReview = () => {
+const CustomersReview = ({ headingRef, DesRef, SliderRef, Trigger2Ref }) => {
     const settings = {
         className: "center",
         centerMode: true,
@@ -356,15 +390,12 @@ const CustomersReview = () => {
         }
     ];
 
-    const headingRef = useRef()
-    const DesRef = useRef()
-    const SliderRef = useRef()
-    const TriggerRef = useRef()
+
 
     useGSAP(() => {
         const tl = gsap.timeline({
             scrollTrigger: {
-                trigger: TriggerRef.current,
+                trigger: Trigger2Ref.current,
                 start: "top 70%",
                 end: "bottom 30%",
                 toggleActions: "play none none reverse",
@@ -394,7 +425,7 @@ const CustomersReview = () => {
     }, []);
 
     return (
-        <section className=" w-full h-[80vh] pt-10 flex items-center justify-center" ref={TriggerRef}>
+        <section className=" w-full h-[80vh] pt-10 flex items-center justify-center" ref={Trigger2Ref}>
             <Container clasess="w-full px-4">
                 <div className="text-center mb-10 md:w-1/2 mx-auto mt-10">
                     <h1 className=" md:text-[2vw] text-[6vw] font-semibold font-[cinzel]" ref={headingRef}> What Our Customers Are Saying</h1>
@@ -408,11 +439,8 @@ const CustomersReview = () => {
     )
 }
 
-const ExploreSecond = () => {
+const ExploreSecond = ({ triggerRef, DetailsRef, ImageRef }) => {
 
-    const ImageRef = useRef()
-    const DetailsRef = useRef()
-    const triggerRef = useRef()
 
 
     useGSAP(() => {
@@ -458,7 +486,7 @@ const ExploreSecond = () => {
 }
 
 
-const PicutesExplore = () => {
+const PicutesExplore = ({ ShowRef, TrigerRef }) => {
     const items = [
         { id: "1", img: MenImage1, url: null, height: 800 },
         { id: "2", img: MenImage2, url: null, height: 400 },
@@ -476,8 +504,7 @@ const PicutesExplore = () => {
         { id: "14", img: MenImage14, url: null, height: 650 },
     ];
 
-    const TrigerRef = useRef()
-    const ShowRef = useRef()
+
 
     useGSAP(() => {
         const tl = gsap.timeline({
