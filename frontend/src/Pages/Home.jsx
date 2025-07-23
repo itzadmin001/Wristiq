@@ -26,7 +26,7 @@ import MenImage11 from "../assets/Images/MenImage-11.webp"
 import MenImage12 from "../assets/Images/MenImage-12.webp"
 import MenImage13 from "../assets/Images/MenImage-13.webp"
 import MenImage14 from "../assets/Images/MenImage-14.webp"
-import Image3 from "../assets/Images/Image-3.webp"
+import Image3 from "../assets/Images/image-3.webp"
 import Image8 from "../assets/Images/Image-8.avif"
 import { lsToCart } from "../Reducers/CartSlice";
 import { useGSAP } from "@gsap/react";
