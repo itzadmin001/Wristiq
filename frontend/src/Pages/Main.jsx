@@ -6,12 +6,12 @@ import Cart from './Cart'
 
 function Main() {
     return (
-        <>
+        <div className=' overflow-hidden'>
             <Header />
             <Cart />
             <Outlet />
             <Footer />
-        </>
+        </div>
     )
 }
 
