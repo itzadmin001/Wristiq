@@ -94,7 +94,7 @@ function Header() {
             {menuOpen && (
                 <div onClick={() => setMenuOpen(false)} className='fixed inset-0 bg-black/50 backdrop-blur-sm z-40'></div>
             )}
-            <div className={`fixed top-0 right-0 h-full bg-[#0B0B0B] text-white z-[99] p-6 w-[75%] sm:w-[60%] md:w-[40%] transform ${menuOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-300 ease-in-out`}>
+            <div className={`fixed top-0 right-0 h-full bg-[#0B0B0B] text-white z-[99] p-6 w-[75%] sm:w-[60%] md:w-[40%] transform ${menuOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-500 ease-in-out`}>
 
                 <div className='flex items-center justify-between mb-10'>
                     <img src={Logo} alt="Logo" className='w-12' />
